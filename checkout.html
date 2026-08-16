@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Sabor Street Kitchen</title>
+    <meta
+      name="description"
+      content="Review your order and confirm pickup details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <img src="images/logo-mark.svg" alt="" width="42" height="42" />
+          <span class="brand-text">Sabor<span>Street Kitchen</span></span>
+        </a>
+        <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 0.75rem">
+          <a class="nav-cart" href="menu.html" aria-label="View order, 0 items">
+            <span aria-hidden="true">&#128722;</span> Order
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Toggle menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">Step 2 of 2</span>
+          <h1>Checkout</h1>
+          <p>Confirm your items and tell us when to expect you.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" style="max-width: 760px">
+          <p class="empty-cart-note" data-empty-cart hidden>
+            Your order is empty.
+            <a href="menu.html">Head back to the menu</a> to add something
+            delicious.
+          </p>
+
+          <table class="summary-table" data-summary-table>
+            <caption class="visually-hidden">
+              Order summary
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Subtotal</td>
+                <td data-summary-subtotal>$0.00</td>
+              </tr>
+              <tr>
+                <td colspan="3">Est. tax (8%)</td>
+                <td data-summary-tax>$0.00</td>
+              </tr>
+              <tr>
+                <td colspan="3">Total</td>
+                <td data-summary-total>$0.00</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <form id="checkout-form" novalidate class="form-grid mt-lg">
+            <div class="form-feedback" role="alert"></div>
+
+            <!--Order confirmation sound: plays once when the order is successfully placed.-->
+            <audio id="order-sound" preload="auto" aria-hidden="true">
+              <source src="audio/order-confirmation.wav" type="audio/wav" />
+              Your browser does not support embedded audio.
+            </audio>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="co-name"
+                  >Full name <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="co-name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Rekha Nachiappan"
+                />
+              </div>
+              <div class="field">
+                <label for="co-phone"
+                  >Phone <span class="required">*</span></label
+                >
+                <input
+                  type="tel"
+                  id="co-phone"
+                  name="phone"
+                  required
+                  autocomplete="tel"
+                  placeholder="(02) 0000-0000"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="co-time"
+                  >Pickup time <span class="required">*</span></label
+                >
+                <input type="time" id="co-time" name="pickupTime" required />
+              </div>
+              <div class="field">
+                <label for="co-payment"
+                  >Payment method <span class="required">*</span></label
+                >
+                <select id="co-payment" name="payment" required>
+                  <option value="">Choose one&hellip;</option>
+                  <option value="card">Pay by card at pickup</option>
+                  <option value="cash">Cash at pickup</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="co-notes">Order notes (optional)</label>
+              <textarea
+                id="co-notes"
+                name="notes"
+                rows="3"
+                placeholder="Allergies, spice preferences, etc."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Place Order
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-columns">
+        <div class="footer-block">
+          <h3>Sabor Street Kitchen</h3>
+          <p>
+            Night-market tacos and fresh sides, served from our Riverside
+            storefront every evening.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/koiaustralia/"
+              aria-label="Sabor Street Kitchen on Instagram"
+              target="_blank"
+              rel="noopener"
+              >IG</a
+            >
+            <a
+              href="https://www.facebook.com/KOIAustralia"
+              aria-label="Sabor Street Kitchen on Facebook"
+              target="_blank"
+              rel="noopener"
+              >FB</a
+            >
+            <a
+              href="https://www.tiktok.com/@kings.own.institute"
+              aria-label="Sabor Street Kitchen on TikTok"
+              target="_blank"
+              rel="noopener"
+              >TT</a
+            >
+          </div>
+        </div>
+        <div class="footer-block">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Hours</h3>
+          <ul>
+            <li>Wed &ndash; Sun: 4pm &ndash; 11pm</li>
+            <li>Monday: 4pm &ndash; 9pm</li>
+            <li>Tuesday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Visit</h3>
+          <ul>
+            <li>99 Frederick St</li>
+            <li>Merewether NSW 2291</li>
+            <li><a href="tel:+612444401234">(02) 4444 0123</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year>2026</span> Sabor Street Kitchen. All rights
+          reserved.
+        </p>
+        <p>Built for ICT726 &middot; Static prototype, no data collected.</p>
+      </div>
+    </footer>
+
+    <div
+      class="visually-hidden"
+      role="status"
+      aria-live="polite"
+      data-live-region
+    ></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

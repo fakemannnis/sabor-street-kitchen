@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu &amp; Order | Sabor Street Kitchen</title>
+    <meta
+      name="description"
+      content="Browse the full Sabor Street Kitchen menu and build your order for pickup."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <img src="images/logo.svg" alt="" width="42" height="42" />
+          <span class="brand-text">Sabor<span>Street Kitchen</span></span>
+        </a>
+        <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="menu.html" aria-current="page">Menu &amp; Order</a>
+            </li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 0.75rem">
+          <a
+            class="nav-cart"
+            href="#order-summary"
+            aria-label="View order, 0 items"
+          >
+            <span aria-hidden="true">&#128722;</span> Order
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Toggle menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">Pickup Only &middot; Ready in ~15 Min</span>
+          <h1>Build Your Order</h1>
+          <p>Tap a category, add what sounds good, and check out below.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container menu-layout menu-layout--order">
+          <div>
+            <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+              <button
+                class="menu-tab"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="cat-tacos"
+                id="tab-tacos"
+              >
+                Tacos
+              </button>
+              <button
+                class="menu-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="cat-antojitos"
+                id="tab-antojitos"
+              >
+                Antojitos
+              </button>
+              <button
+                class="menu-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="cat-bebidas"
+                id="tab-bebidas"
+              >
+                Bebidas
+              </button>
+              <button
+                class="menu-tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="cat-postres"
+                id="tab-postres"
+              >
+                Postres
+              </button>
+            </div>
+
+            <!-- TACOS -->
+            <div
+              id="cat-tacos"
+              class="menu-category is-active"
+              role="tabpanel"
+              aria-labelledby="tab-tacos"
+            >
+              <div class="ticket-grid">
+                <article
+                  class="ticket"
+                  data-id="taco-asada"
+                  data-name="Carne Asada Tacos (order of 2)"
+                  data-price="4.25"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-carne-asada.jpg"
+                      alt="Two carne asada tacos with onion and cilantro"
+                      loading="lazy"
+                    />
+                    <span class="ticket-stamp">Best Seller</span>
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Carne Asada</h3>
+                      <span class="ticket-price">$4.25</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Grilled marinated skirt steak, onion, cilantro, salsa
+                      roja. Order of two.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag spicy">Medium</span
+                      ><span class="tag">GF</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Carne Asada Tacos"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="taco-pastor"
+                  data-name="Al Pastor Tacos (order of 2)"
+                  data-price="4.50"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-al-pastor.jpg"
+                      alt="Two al pastor tacos topped with pineapple"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Al Pastor</h3>
+                      <span class="ticket-price">$4.50</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Achiote-marinated pork, grilled pineapple, onion,
+                      cilantro. Order of two.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag spicy">Medium</span
+                      ><span class="tag">GF</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Al Pastor Tacos"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="taco-fish"
+                  data-name="Baja Fish Tacos (order of 2)"
+                  data-price="5.25"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-baja-fish.jpg"
+                      alt="Two crispy Baja fish tacos with slaw and crema"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Baja Fish</h3>
+                      <span class="ticket-price">$5.25</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Beer-battered cod, cabbage slaw, chipotle crema, pico de
+                      gallo. Order of two.
+                    </p>
+                    <div class="ticket-tags"><span class="tag">Mild</span></div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Baja Fish Tacos"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="taco-birria"
+                  data-name="Quesabirria (order of 2)"
+                  data-price="6.75"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-quesabirria.jpg"
+                      alt="Crispy quesabirria tacos with a cup of consomme"
+                      loading="lazy"
+                    />
+                    <span class="ticket-stamp">&nbsp; New &nbsp;&nbsp;</span>
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Quesabirria</h3>
+                      <span class="ticket-price">$6.75</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Crispy griddled tacos, melted oaxaca cheese, birria,
+                      consomm&eacute; for dipping.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag spicy">Spicy</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Quesabirria"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- ANTOJITOS -->
+            <div
+              id="cat-antojitos"
+              class="menu-category"
+              role="tabpanel"
+              aria-labelledby="tab-antojitos"
+            >
+              <div class="ticket-grid">
+                <article
+                  class="ticket"
+                  data-id="elote"
+                  data-name="Street Corn Elote"
+                  data-price="5.00"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-elote.jpg"
+                      alt="Grilled corn with crema, cotija and chili powder"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Elote</h3>
+                      <span class="ticket-price">$5.00</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Charred sweet corn, chili-lime crema, cotija, tajin.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegetarian</span>
+                    </div>
+                    <div class="qty-row">
+                      <div class="qty-control" aria-label="Quantity for Elote">
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="quesadilla"
+                  data-name="Quesadilla"
+                  data-price="6.00"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-quesabirria.jpg"
+                      alt="A folded cheese quesadilla with melted filling"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Quesadilla</h3>
+                      <span class="ticket-price">$6.00</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Handmade flour tortilla, melted oaxaca cheese, choice of
+                      filling.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegetarian option</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Quesadilla"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="guac"
+                  data-name="Guac &amp; Chips"
+                  data-price="6.50"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-guac.jpg"
+                      alt="A bowl of guacamole with fresh tortilla chips"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Guac &amp; Chips</h3>
+                      <span class="ticket-price">$6.50</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Fresh-mashed avocado, lime, cilantro, house-fried tortilla
+                      chips.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegan</span><span class="tag">GF</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Guac and Chips"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div
+              id="cat-bebidas"
+              class="menu-category"
+              role="tabpanel"
+              aria-labelledby="tab-bebidas"
+            >
+              <div class="ticket-grid">
+                <article
+                  class="ticket"
+                  data-id="agua-fresca"
+                  data-name="Agua Fresca"
+                  data-price="3.50"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-agua-fresca.jpg"
+                      alt="Two glasses of colorful agua fresca"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Agua Fresca</h3>
+                      <span class="ticket-price">$3.50</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Rotating fresh fruit water. Ask what's pouring tonight.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegan</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Agua Fresca"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="horchata"
+                  data-name="Horchata"
+                  data-price="3.75"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-horchata.jpg"
+                      alt="A cup of horchata rice milk drink with cinnamon"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Horchata</h3>
+                      <span class="ticket-price">$3.75</span>
+                    </div>
+                    <p class="ticket-desc">
+                      House-made rice milk, cinnamon, a touch of vanilla.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegetarian</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Horchata"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="jarritos"
+                  data-name="Jarritos Soda"
+                  data-price="3.00"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-jarritos.jpg"
+                      alt="A bottle of Jarritos flavored soda"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Jarritos</h3>
+                      <span class="ticket-price">$3.00</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Imported Mexican soda. Ask about tonight's flavors.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegetarian</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Jarritos Soda"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div
+              id="cat-postres"
+              class="menu-category"
+              role="tabpanel"
+              aria-labelledby="tab-postres"
+            >
+              <div class="ticket-grid">
+                <article
+                  class="ticket"
+                  data-id="churros"
+                  data-name="Churros (order of 4)"
+                  data-price="5.50"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-churros.jpg"
+                      alt="A basket of cinnamon sugar churros with chocolate dip"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Churros</h3>
+                      <span class="ticket-price">$5.50</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Fried to order, cinnamon sugar, chocolate dipping sauce.
+                      Order of four.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegetarian</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Churros"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  class="ticket"
+                  data-id="tres-leches"
+                  data-name="Tres Leches Cake"
+                  data-price="5.75"
+                >
+                  <div class="ticket-media">
+                    <img
+                      src="images/dish-tres-leches.jpg"
+                      alt="A slice of tres leches cake with whipped cream"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="ticket-body">
+                    <div class="ticket-title-row">
+                      <h3>Tres Leches</h3>
+                      <span class="ticket-price">$5.75</span>
+                    </div>
+                    <p class="ticket-desc">
+                      Three-milk soaked sponge cake, fresh whipped cream,
+                      cinnamon dust.
+                    </p>
+                    <div class="ticket-tags">
+                      <span class="tag">Vegetarian</span>
+                    </div>
+                    <div class="qty-row">
+                      <div
+                        class="qty-control"
+                        aria-label="Quantity for Tres Leches Cake"
+                      >
+                        <button
+                          type="button"
+                          class="qty-minus"
+                          aria-label="Decrease quantity"
+                        >
+                          &minus;
+                        </button>
+                        <span class="qty-value">1</span>
+                        <button
+                          type="button"
+                          class="qty-plus"
+                          aria-label="Increase quantity"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <button type="button" class="btn btn-primary add-to-cart">
+                        Add to order
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cart panel -->
+          <!-- Plays a short pop sound whenever an item is added to the order. -->
+          <audio id="cart-add-sound" preload="auto" aria-hidden="true">
+            <source src="audio/cart-add.wav" type="audio/wav" />
+          </audio>
+
+          <aside class="cart-panel" id="order-summary" aria-label="Your order">
+            <h2>Your Order</h2>
+            <ul class="cart-items" data-cart-list aria-live="polite"></ul>
+            <div class="cart-totals">
+              <div class="cart-row">
+                <span>Subtotal</span><span data-cart-subtotal>$0.00</span>
+              </div>
+              <div class="cart-row">
+                <span>Est. tax (8%)</span><span data-cart-tax>$0.00</span>
+              </div>
+              <div class="cart-row grand">
+                <span>Total</span><span data-cart-total>$0.00</span>
+              </div>
+            </div>
+            <a
+              class="btn btn-primary btn-block mt-lg"
+              href="checkout.html"
+              data-checkout-link
+              style="justify-content: center"
+              >Proceed to Checkout</a
+            >
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-columns">
+        <div class="footer-block">
+          <h3>Sabor Street Kitchen</h3>
+          <p>
+            Night-market tacos and fresh sides, served from our Riverside
+            storefront every evening.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/koiaustralia/"
+              aria-label="Sabor Street Kitchen on Instagram"
+              target="_blank"
+              rel="noopener"
+              >IG</a
+            >
+            <a
+              href="https://www.facebook.com/KOIAustralia"
+              aria-label="Sabor Street Kitchen on Facebook"
+              target="_blank"
+              rel="noopener"
+              >FB</a
+            >
+            <a
+              href="https://www.tiktok.com/@kings.own.institute"
+              aria-label="Sabor Street Kitchen on TikTok"
+              target="_blank"
+              rel="noopener"
+              >TT</a
+            >
+          </div>
+        </div>
+        <div class="footer-block">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Hours</h3>
+          <ul>
+            <li>Wed &ndash; Sun: 4pm &ndash; 11pm</li>
+            <li>Monday: 4pm &ndash; 9pm</li>
+            <li>Tuesday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Visit</h3>
+          <ul>
+            <li>99 Frederick St</li>
+            <li>Merewether NSW 2291</li>
+            <li><a href="tel:+612444401234">(02) 4444 0123</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year>2026</span> Sabor Street Kitchen. All rights
+          reserved.
+        </p>
+        <p>Built for ICT726 &middot; Static prototype, no data collected.</p>
+      </div>
+    </footer>
+
+    <div
+      class="visually-hidden"
+      role="status"
+      aria-live="polite"
+      data-live-region
+    ></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Sabor Street Kitchen</title>
+    <meta
+      name="description"
+      content="Photos from the Sabor Street Kitchen storefront and kitchen."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <img src="images/logo.svg" alt="" width="42" height="42" />
+          <span class="brand-text">Sabor<span>Street Kitchen</span></span>
+        </a>
+        <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 0.75rem">
+          <a class="nav-cart" href="menu.html" aria-label="View order, 0 items">
+            <span aria-hidden="true">&#128722;</span> Order
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Toggle menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">Behind the Grill</span>
+          <h1>Gallery</h1>
+          <p>
+            A look at the kitchen, the counter, and a few of the plates that
+            keep people coming back. Click any photo to see it larger.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="gallery-grid">
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-1.jpg"
+              data-caption="The grill station mid-service on a busy Friday night"
+            >
+              <img
+                src="images/gallery-1.jpg"
+                alt="The grill station mid-service on a busy Friday night"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-2.jpg"
+              data-caption="Hand-pressing corn tortillas fresh for the evening service"
+            >
+              <img
+                src="images/gallery-2.jpg"
+                alt="Hand-pressing corn tortillas fresh for the evening service"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-3.jpg"
+              data-caption="The salsa bar, restocked every few hours"
+            >
+              <img
+                src="images/gallery-3.jpg"
+                alt="The salsa bar, restocked every few hours"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-4.jpg"
+              data-caption="A packed order ready for pickup at the counter"
+            >
+              <img
+                src="images/gallery-4.jpg"
+                alt="A packed order ready for pickup at the counter"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-5.jpg"
+              data-caption="Regulars sharing a table on the patio at sunset"
+            >
+              <img
+                src="images/gallery-5.jpg"
+                alt="Regulars sharing a table on the patio at sunset"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-6.jpg"
+              data-caption="Fresh produce delivery, sorted for the day's prep"
+            >
+              <img
+                src="images/gallery-6.jpg"
+                alt="Fresh produce delivery, sorted for the day's prep"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-7.jpg"
+              data-caption="The storefront sign lit up as the sun goes down"
+            >
+              <img
+                src="images/gallery-7.jpg"
+                alt="The storefront sign lit up as the sun goes down"
+                loading="lazy"
+              />
+            </button>
+
+            <button
+              type="button"
+              class="gallery-item"
+              data-full="images/gallery-8.jpg"
+              data-caption="Diego plating a fresh batch of quesabirria"
+            >
+              <img
+                src="images/gallery-8.jpg"
+                alt="Diego plating a fresh batch of quesabirria"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint">
+        <div class="container text-center">
+          <span class="eyebrow">See It Live</span>
+          <h2>Watch Kitchen Tour</h2>
+          <video
+            controls
+            width="100%"
+            style="
+              max-width: 720px;
+              border-radius: 14px;
+              box-shadow: var(--shadow-card);
+              margin-top: 1rem;
+            "
+            poster="images/logo.svg"
+          >
+            <source src="video/kitchen_tour.mp4" type="video/mp4" />
+            Your browser doesn't support embedded video.
+            <a href="video/kitchen_tour.mp4">Download the video</a> instead.
+          </video>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox modal -->
+    <div
+      class="lightbox"
+      data-lightbox
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Enlarged photo viewer"
+    >
+      <div class="lightbox-content">
+        <button
+          type="button"
+          class="lightbox-close"
+          aria-label="Close photo viewer"
+        >
+          &times;
+        </button>
+        <img src="" alt="" />
+        <p class="lightbox-caption" data-lightbox-caption></p>
+      </div>
+    </div>
+
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-columns">
+        <div class="footer-block">
+          <h3>Sabor Street Kitchen</h3>
+          <p>
+            Night-market tacos and fresh sides, served from our Riverside
+            storefront every evening.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/koiaustralia/"
+              aria-label="Sabor Street Kitchen on Instagram"
+              target="_blank"
+              rel="noopener"
+              >IG</a
+            >
+            <a
+              href="https://www.facebook.com/KOIAustralia"
+              aria-label="Sabor Street Kitchen on Facebook"
+              target="_blank"
+              rel="noopener"
+              >FB</a
+            >
+            <a
+              href="https://www.tiktok.com/@kings.own.institute"
+              aria-label="Sabor Street Kitchen on TikTok"
+              target="_blank"
+              rel="noopener"
+              >TT</a
+            >
+          </div>
+        </div>
+        <div class="footer-block">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Hours</h3>
+          <ul>
+            <li>Wed &ndash; Sun: 4pm &ndash; 11pm</li>
+            <li>Monday: 4pm &ndash; 9pm</li>
+            <li>Tuesday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Visit</h3>
+          <ul>
+            <li>99 Frederick St</li>
+            <li>Merewether NSW 2291</li>
+            <li><a href="tel:+612444401234">(02) 4444 0123</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year>2026</span> Sabor Street Kitchen. All rights
+          reserved.
+        </p>
+        <p>Built for ICT726 &middot; Static prototype, no data collected.</p>
+      </div>
+    </footer>
+
+    <div
+      class="visually-hidden"
+      role="status"
+      aria-live="polite"
+      data-live-region
+    ></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

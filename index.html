@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Sabor Street Kitchen | Latin American Street Food, Made Fresh Nightly
+    </title>
+    <meta
+      name="description"
+      content="Sabor Street Kitchen brings night-market tacos, elote, and aguas frescas to the neighborhood. Order online or visit our storefront."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <img src="images/logo.svg" alt="" width="42" height="42" />
+          <span class="brand-text">Sabor<span>Street Kitchen</span></span>
+        </a>
+
+        <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div style="display: flex; align-items: center; gap: 0.75rem">
+          <a class="nav-cart" href="menu.html" aria-label="View order, 0 items">
+            <span aria-hidden="true">&#128722;</span> Order
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Toggle menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Heroo -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <span class="eyebrow"
+            >Open Wed&ndash;Mon &middot; 4pm&ndash;11pm</span
+          >
+          <h1>
+            Late-Night <span class="flicker">Sabor</span>, Served Street-Side
+          </h1>
+          <p class="hero-lede">
+            Sabor Street Kitchen started as a single taco cart at the Riverside
+            Night Market and grew into a full storefront, without losing the
+            char, the crowd, or the 1am cravings. Handmade tortillas,
+            slow-smoked meats, and salsas built from a family recipe box, every
+            single night.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="menu.html">Order Online</a>
+            <a class="btn btn-secondary" href="about.html">Our Story</a>
+          </div>
+          <div class="hero-badges">
+            <div><strong>7+</strong> years slinging tacos</div>
+            <div><strong>40+</strong> scratch-made salsas &amp; sauces</div>
+            <div><strong>4.8</strong> average night-market rating</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured dishes -->
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Crowd Favorites</span>
+            <h2>Tonight's Ticket Picks</h2>
+            <p>
+              A handful of the orders that keep the line out the door. See the
+              full menu and build your own order any time.
+            </p>
+          </div>
+
+          <div class="ticket-grid">
+            <article class="ticket">
+              <div class="ticket-media">
+                <img
+                  src="images/dish-carne-asada.jpg"
+                  alt="Two carne asada tacos topped with onion, cilantro and a lime wedge on a paper tray"
+                  loading="lazy"
+                />
+                <span class="ticket-stamp">Best Seller</span>
+              </div>
+              <div class="ticket-body">
+                <div class="ticket-title-row">
+                  <h3>Carne Asada Tacos</h3>
+                  <span class="ticket-price">$4.25</span>
+                </div>
+                <p class="ticket-desc">
+                  Grilled marinated skirt steak, white onion, cilantro, house
+                  salsa roja, double corn tortillas.
+                </p>
+                <div class="ticket-tags">
+                  <span class="tag spicy">Medium heat</span
+                  ><span class="tag">Gluten-free</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="ticket">
+              <div class="ticket-media">
+                <img
+                  src="images/dish-elote.jpg"
+                  alt="Grilled corn on the cob coated in crema, cotija cheese and chili powder"
+                  loading="lazy"
+                />
+              </div>
+              <div class="ticket-body">
+                <div class="ticket-title-row">
+                  <h3>Street Corn Elote</h3>
+                  <span class="ticket-price">$5.00</span>
+                </div>
+                <p class="ticket-desc">
+                  Charred sweet corn, chili-lime crema, cotija cheese, tajin
+                  dust. A market classic.
+                </p>
+                <div class="ticket-tags">
+                  <span class="tag">Vegetarian</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="ticket">
+              <div class="ticket-media">
+                <img
+                  src="images/dish-quesabirria.jpg"
+                  alt="Crispy quesabirria tacos with melted cheese and a side of consomm\u00e9 for dipping"
+                  loading="lazy"
+                />
+                <span class="ticket-stamp">&nbsp; New &nbsp;&nbsp;</span>
+              </div>
+              <div class="ticket-body">
+                <div class="ticket-title-row">
+                  <h3>Quesabirria</h3>
+                  <span class="ticket-price">$6.75</span>
+                </div>
+                <p class="ticket-desc">
+                  Crispy griddled tacos, melted oaxaca cheese, slow-braised
+                  birria, side of consommé for dipping.
+                </p>
+                <div class="ticket-tags">
+                  <span class="tag spicy">Spicy</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="ticket">
+              <div class="ticket-media">
+                <img
+                  src="images/dish-agua-fresca.jpg"
+                  alt="Two glasses of colorful agua fresca with fresh fruit garnish"
+                  loading="lazy"
+                />
+              </div>
+              <div class="ticket-body">
+                <div class="ticket-title-row">
+                  <h3>Agua Fresca</h3>
+                  <span class="ticket-price">$3.50</span>
+                </div>
+                <p class="ticket-desc">
+                  Rotating fresh fruit waters. Ask what's pouring tonight.
+                  Watermelon-mint is a regular.
+                </p>
+                <div class="ticket-tags"><span class="tag">Vegan</span></div>
+              </div>
+            </article>
+          </div>
+
+          <p class="text-center mt-lg">
+            <a class="btn btn-outline-dark" href="menu.html"
+              >See Full Menu &amp; Start an Order</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- About teaser -->
+      <section class="section section-dark on-dark">
+        <div class="container about-grid">
+          <div class="about-media">
+            <img
+              src="images/about-truck.jpg"
+              alt="The original Sabor Street Kitchen food truck parked at the Riverside Night Market"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <span class="eyebrow">Since 2018</span>
+            <h2>From One Cart to a Full Kitchen</h2>
+            <p>
+              What began as a folding table and a propane grill at the Riverside
+              Night Market is now a proper storefront kitchen, same recipes,
+              same char, same late hours. Every tortilla is still pressed by
+              hand and every salsa still gets made from scratch, daily.
+            </p>
+            <a class="btn btn-secondary" href="about.html"
+              >Read Our Full Story</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="section section-tint">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">What the Regulars Say</span>
+            <h2>Straight From the Line</h2>
+          </div>
+          <div class="testimonial-strip">
+            <blockquote class="testimonial">
+              <p>
+                "The quesabirria alone is worth the drive across town.
+                Consistently the best tacos in the city, hands down."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="images/maria.jpg"
+                  alt="Maria T."
+                  class="testimonial-avatar"
+                />
+                <cite>&mdash; Maria T., regular since 2019</cite>
+              </div>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>
+                "Ordering online for pickup is dangerously easy. I've never
+                waited more than ten minutes."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="images/jordan.jpg"
+                  alt="Jordan K."
+                  class="testimonial-avatar"
+                />
+                <cite>&mdash; Jordan K.</cite>
+              </div>
+            </blockquote>
+
+            <blockquote class="testimonial">
+              <p>
+                "They remembered my order was dairy-free after one visit. That's
+                the kind of place this is."
+              </p>
+              <div class="testimonial-author">
+                <img
+                  src="images/priya.jpg"
+                  alt="Priya S."
+                  class="testimonial-avatar"
+                />
+                <cite>&mdash; Priya S.</cite>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-columns">
+        <div class="footer-block">
+          <h3>Sabor Street Kitchen</h3>
+          <p>
+            Night-market tacos and fresh sides, served from our Riverside
+            storefront every evening.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/koiaustralia/"
+              aria-label="Sabor Street Kitchen on Instagram"
+              target="_blank"
+              rel="noopener"
+              >IG</a
+            >
+            <a
+              href="https://www.facebook.com/KOIAustralia"
+              aria-label="Sabor Street Kitchen on Facebook"
+              target="_blank"
+              rel="noopener"
+              >FB</a
+            >
+            <a
+              href="https://www.tiktok.com/@kings.own.institute"
+              aria-label="Sabor Street Kitchen on TikTok"
+              target="_blank"
+              rel="noopener"
+              >TT</a
+            >
+          </div>
+        </div>
+        <div class="footer-block">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Hours</h3>
+          <ul>
+            <li>Wed &ndash; Sun: 4pm &ndash; 11pm</li>
+            <li>Monday: 4pm &ndash; 9pm</li>
+            <li>Tuesday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Visit</h3>
+          <ul>
+            <li>99 Frederick St</li>
+            <li>Merewether NSW 2291</li>
+            <li><a href="tel:+612444401234">(02) 4444 0123</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year>2026</span> Sabor Street Kitchen. All rights
+          reserved.
+        </p>
+        <p>Built for ICT726 &middot; Static prototype, no data collected.</p>
+      </div>
+    </footer>
+
+    <div
+      class="visually-hidden"
+      role="status"
+      aria-live="polite"
+      data-live-region
+    ></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

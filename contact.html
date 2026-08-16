@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Sabor Street Kitchen</title>
+    <meta
+      name="description"
+      content="Get in touch with Sabor Street Kitchen, request a reservation, or find us on the map."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html">
+          <img src="images/logo.svg" alt="" width="42" height="42" />
+          <span class="brand-text">Sabor<span>Street Kitchen</span></span>
+        </a>
+        <nav class="main-nav" id="primary-navigation" aria-label="Primary">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+        <div style="display: flex; align-items: center; gap: 0.75rem">
+          <a class="nav-cart" href="menu.html" aria-label="View order, 0 items">
+            <span aria-hidden="true">&#128722;</span> Order
+            <span class="count" data-cart-count>0</span>
+          </a>
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Toggle menu"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container">
+          <span class="eyebrow">We'd Love to Hear From You</span>
+          <h1>Contact &amp; Reservations</h1>
+          <p>
+            Questions, catering requests, group reservations, or just want to
+            say hi reach us any of the ways below.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="info-grid">
+            <div class="info-card">
+              <h3>Visit</h3>
+              <p>99 Frederick St<br />Merewether NSW 2291</p>
+            </div>
+            <div class="info-card">
+              <h3>Call</h3>
+              <p><a href="tel:+61249630142">(02) 4444 0123</a></p>
+            </div>
+            <div class="info-card">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:hellosabor@gmail.com">hellosabor@gmail.com</a>
+              </p>
+            </div>
+            <div class="info-card">
+              <h3>Follow</h3>
+              <p>
+                <a
+                  href="https://www.instagram.com/koiaustralia"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+                &middot;
+                <a
+                  href="https://www.facebook.com/KOIAustralia"
+                  target="_blank"
+                  rel="noopener"
+                  >Facebook</a
+                >
+                &middot;
+                <a
+                  href="https://www.tiktok.com/@kings.own.institute"
+                  target="_blank"
+                  rel="noopener"
+                  >TikTok</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="menu-layout menu-layout--split">
+            <div>
+              <h2>Send a Message</h2>
+              <form id="contact-form" novalidate class="form-grid">
+                <div class="form-feedback" role="alert"></div>
+
+                <!-- Plays a short chime once the message is successfully sent. -->
+                <audio
+                  id="message-sent-sound"
+                  preload="auto"
+                  aria-hidden="true"
+                >
+                  <source src="audio/message-sent.wav" type="audio/wav" />
+                </audio>
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="name"
+                      >Full name <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      minlength="2"
+                      autocomplete="name"
+                      placeholder="Rekha Nachiappan "
+                      aria-describedby="name-error"
+                    />
+                    <p
+                      class="field-error"
+                      id="name-error"
+                      data-error-for="name"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                  <div class="field">
+                    <label for="email"
+                      >Email <span class="required">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      autocomplete="email"
+                      placeholder="Rekhanachiappan@example.com"
+                      aria-describedby="email-error"
+                    />
+                    <p
+                      class="field-error"
+                      id="email-error"
+                      data-error-for="email"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="field">
+                    <label for="phone">Phone (optional)</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      autocomplete="tel"
+                      placeholder="(61) 000-000-000"
+                      aria-describedby="phone-error"
+                    />
+                    <p
+                      class="field-error"
+                      id="phone-error"
+                      data-error-for="phone"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                  <div class="field">
+                    <label for="partySize">Party size (if reservation)</label>
+                    <input
+                      type="number"
+                      id="partySize"
+                      name="partySize"
+                      min="1"
+                      max="20"
+                      placeholder="4"
+                      aria-describedby="partySize-error"
+                    />
+                    <p
+                      class="field-error"
+                      id="partySize-error"
+                      data-error-for="partySize"
+                      aria-live="polite"
+                    ></p>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="message"
+                    >Message <span class="required">*</span></label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    minlength="10"
+                    rows="5"
+                    placeholder="Tell us what's up..."
+                    aria-describedby="message-error"
+                  ></textarea>
+                  <p class="field-hint">Minimum 10 characters.</p>
+                  <p
+                    class="field-error"
+                    id="message-error"
+                    data-error-for="message"
+                    aria-live="polite"
+                  ></p>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <div>
+              <h2>Find Us</h2>
+              <div class="map-frame">
+                <iframe
+                  title="Map showing Sabor Street Kitchen location at 99 Frederick St, Merewether NSW 2291"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=151.75240195%2C-32.95045237%2C151.75840195%2C-32.94745237&amp;layer=mapnik&amp;marker=-32.94895237%2C151.75540195"
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+              <p class="field-hint">
+                <a
+                  href="https://www.openstreetmap.org/?mlat=-32.94895237&amp;mlon=151.75540195#map=17/-32.94895237/151.75540195"
+                  target="_blank"
+                  rel="noopener"
+                  >View larger map</a
+                >
+              </p>
+              <p class="field-hint mt-lg">
+                Street parking is available along Frederick St and Ridge St
+                after 5pm. Bike racks are out front.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact-footer">
+      <div class="container footer-columns">
+        <div class="footer-block">
+          <h3>Sabor Street Kitchen</h3>
+          <p>
+            Night-market tacos and fresh sides, served from our Riverside
+            storefront every evening.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.instagram.com/koiaustralia/"
+              aria-label="Sabor Street Kitchen on Instagram"
+              target="_blank"
+              rel="noopener"
+              >IG</a
+            >
+            <a
+              href="https://www.facebook.com/KOIAustralia"
+              aria-label="Sabor Street Kitchen on Facebook"
+              target="_blank"
+              rel="noopener"
+              >FB</a
+            >
+            <a
+              href="https://www.tiktok.com/@kings.own.institute"
+              aria-label="Sabor Street Kitchen on TikTok"
+              target="_blank"
+              rel="noopener"
+              >TT</a
+            >
+          </div>
+        </div>
+        <div class="footer-block">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu &amp; Order</a></li>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Hours</h3>
+          <ul>
+            <li>Wed &ndash; Sun: 4pm &ndash; 11pm</li>
+            <li>Monday: 4pm &ndash; 9pm</li>
+            <li>Tuesday: Closed</li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h3>Visit</h3>
+          <ul>
+            <li>99 Frederick St</li>
+            <li>Merewether NSW 2291</li>
+            <li><a href="tel:+612444401234">(02) 4444 0123</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span data-year>2026</span> Sabor Street Kitchen. All rights
+          reserved.
+        </p>
+        <p>Built for ICT726 &middot; Static prototype, no data collected.</p>
+      </div>
+    </footer>
+
+    <div
+      class="visually-hidden"
+      role="status"
+      aria-live="polite"
+      data-live-region
+    ></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
