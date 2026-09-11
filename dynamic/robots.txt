@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /account.php
+Disallow: /includes/
+
+Sitemap: https://www.saborstreetkitchen.example/sitemap.xml
