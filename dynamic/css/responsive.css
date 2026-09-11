@@ -1,0 +1,139 @@
+/* ---------- Tablet and below (<= 900px) ---------- */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-grid .about-media {
+    order: -1;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+  .cart-panel {
+    position: static;
+  }
+
+  .footer-columns {
+    columns: 2 200px;
+  }
+}
+
+/* ---------- Mobile navigation (<= 760px) ---------- */
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    background: var(--night-2);
+    padding: 5.5rem var(--space-md) var(--space-md);
+    transform: translateX(100%);
+    transition: transform var(--transition-med);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.35);
+  }
+  .main-nav.is-open {
+    transform: translateX(0);
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  .main-nav a {
+    font-size: 1rem;
+    display: block;
+  }
+
+  .nav-bar {
+    position: relative;
+  }
+  .nav-cart {
+    order: 2;
+  }
+}
+
+/* ---------- Small tablets / large phones (<= 640px) ---------- */
+@media (max-width: 640px) {
+  h1 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+  }
+
+  .hero-inner {
+    padding-block: var(--space-lg) var(--space-md);
+  }
+  .hero-badges {
+    gap: var(--space-sm);
+  }
+
+  .section {
+    padding-block: var(--space-lg);
+  }
+
+  .ticket-grid,
+  .gallery-grid,
+  .values-grid,
+  .info-grid,
+  .testimonial-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns {
+    columns: 1;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .lightbox-close {
+    top: -14px;
+    right: 0;
+  }
+}
+
+/* ---------- Small phones (<= 420px) ---------- */
+@media (max-width: 420px) {
+  .container {
+    padding-inline: var(--space-sm);
+  }
+  .brand-text {
+    font-size: 1.1rem;
+  }
+  .btn {
+    padding: 0.75em 1.2em;
+    font-size: 0.88rem;
+  }
+  .ticket-stamp {
+    right: -40px;
+    font-size: 0.62rem;
+  }
+}
+
+/* ---------- Larger desktops ---------- */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .site-header,
+  .site-footer,
+  .hero-cta,
+  .nav-toggle,
+  .lightbox {
+    display: none;
+  }
+}
